@@ -46,3 +46,21 @@ Question 1: [Difficulty: Easy]
 
     Accepted 4,702,303/8.9M
     Acceptance Rate 53.0%
+
+After brainstorming and trying code for about an hour and a half, referred to this [Video](https://www.youtube.com/watch?v=TTWKBqG-6IU) for code intuition.
+
+**Solution:**
+
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int A = m - 1, B = n - 1, C = m + n - 1;
+        while (B >= 0) {
+            if (A >= 0 && nums1[A] > nums2[B]) {
+                nums1[C] = nums1[A];
+                A--;
+            } else {
+                nums1[C] = nums2[B];
+                B--;
+            }
+            C--;
+        }
+    }
