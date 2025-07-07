@@ -168,3 +168,22 @@ Question 3: [Difficulty: Easy]
     nums is sorted in non-decreasing order.
 
 **Solution 3:**
+
+    public int removeDuplicates(int[] nums) {
+        int count = 0;
+
+        if (nums.length == 0) {
+            return count;
+        }
+
+        nums[count] = nums[count];
+
+        for (int i=0; i<nums.length; i++) {
+            if (i>0 && nums[i] != nums[i-1]) {
+                count++;
+                nums[count] = nums[i];
+            }
+        }
+
+        return count+1;
+    }
