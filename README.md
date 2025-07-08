@@ -237,3 +237,31 @@ Question 4: [Difficulty: Medium]
     1 <= nums.length <= 3 * 104
     -104 <= nums[i] <= 104
     nums is sorted in non-decreasing order.
+
+**Solution 4:**
+
+    public int removeDuplicates(int[] nums) {
+        int count = 0, count2 = 1;
+
+        if (nums.length == 0) {
+            return 0;
+        }
+
+        nums[count] = nums[count];
+
+        for (int i=1; i<nums.length; i++) {
+            if (nums[i] != nums[i-1]) {
+                count2 = 1;
+                count++;
+                nums[count] = nums[i];
+            } else {
+                count2++;
+                if (count2 <= 2) {
+                    count++;
+                    nums[count] = nums[i];
+                }
+            }
+        }
+
+        return count + 1;
+    }
