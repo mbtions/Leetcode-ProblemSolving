@@ -326,4 +326,29 @@ You may assume that the majority element always exists in the array.
         return majority;
     }
 
-In this question, for the follow-up to be fulfilled, you need to look for the Boyer-Moore algorithm.
+In this question, for the follow-up to be fulfilled, you need to look for the Boyer-Moore Voting algorithm.
+
+**Algorithm**
+
+1.  Initialize two variables: `count` and `candidate`. Set `count` to `0` and `candidate` to an arbitrary value.
+2.  Iterate through the array `nums`:
+    - If count is `0`, assign the current element as the new `candidate` and increment `count` by `1`.
+    - If the current element is the same as the `candidate`, increment `count` by 1.
+    - If the current element is different from the `candidate`, decrement `count` by `1`.
+3.  After the iteration, the `candidate` variable will hold the majority element.
+
+        public int majortyElement( int[] nums)
+        {
+            int count = 0;
+            int candidate = 0;
+
+            for (num: nums) {
+
+                if (count == 0)
+                {
+                    candidate = num;
+                }
+
+                count += (num==candidate) ? 1 : -1;
+            }
+        }
