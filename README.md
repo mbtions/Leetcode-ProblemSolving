@@ -295,3 +295,27 @@ Question 5: [Difficulty: Easy]
     - -109 <= nums[i] <= 109
 
     Follow-up: Could you solve the problem in linear time and in O(1) space?
+
+**Solution 5:**
+
+    public int majorityElement(int[] nums) {
+        int majority = -1;
+
+        HashMap<Integer, Integer> hmap = new HashMap<Integer, Integer>();
+        for (int i=0; i<nums.length; i++) {
+            if (!hmap.containsKey(nums[i])) {
+                hmap.put(nums[i], 1);
+            } else {
+                hmap.put(nums[i], hmap.get(nums[i])+1);
+            }
+        }
+
+        for (Map.Entry<Integer, Integer> entry : hmap.entrySet()) {
+            if (entry.getValue() > nums.length/2) {
+                majority = entry.getKey();
+                break;
+            }
+        }
+
+        return majority;
+    }
