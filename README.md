@@ -386,3 +386,59 @@ rotate 2 steps to the right: [3,99,-1,-100]
 **Follow up:**  
 Try to come up with as many solutions as you can. There are at least three different ways to solve this problem.
 Could you do it in-place with O(1) extra space?
+
+<u>**Solution 6:**</u>
+
+**1. Approach I: Brute Force Approach**
+
+Shift each element one by one to the right using loop. **Note** that this solution will work well but it **may exceed the time limit**.
+
+    public void rotate(int[] nums, int k) {
+        for (int i=0; i<k; i++) { // number of rotations
+            int temp = nums[nums.length-1];
+            int j=nums.length-1;
+            for (; j>0; j--) {
+                nums[j] = nums[j-1];
+            }
+            nums[0] = temp;
+        }
+    }
+
+**2. Approach II**
+
+**Step 1:** Reverse the entire array.  
+Let's say, we have an array `nums` with values below  
+`nums = [1,2,3,4,5,6,7]`  
+Reversed nums array is  
+`nums = [7,6,5,4,3,2,1]`  
+we have `k = 3`  
+=> from index `0` to index `2`, rotated elements will be there,  
+i.e. we need to reverse (or sort) first part such that we get `nums = [5,6,7,_,_,_,_]`
+
+**Step 2:** Reverse the array from index `0` to index `k-1`, since `k` elements are required to be rotated right i.e. `k` largest elements will be appearing in the first part of the array.
+
+After reverse from index `0` to `k-1 = 2`, we get `nums = [5,6,7,4,3,2,1]`
+
+**Step 3:** Reverse the remaining array that is rotated (or shifted to the right) i.e. from index `k` to index `nums.length-1`
+
+Now after final reverse of the remaining part, we get `nums = [5,6,7,1,2,3,4]`. Hence required array is obtained and therefore rotated upto `k=3` rotations.
+
+<u>**Code:**</u>
+
+    public void rotate(int[] nums, int k) {
+        int len = nums.length;
+        k = k % len; // when number of rotations is greater than the array length
+        reverse(nums, 0, len-1);
+        reverse(nums, 0, k-1);
+        reverse(nums, k, len-1);
+    }
+
+    public void reverse (int[] nums, int start, int end) {
+        while (start < end) {
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start++;
+            end--;
+        }
+    }
