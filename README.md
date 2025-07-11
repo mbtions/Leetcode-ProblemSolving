@@ -471,3 +471,68 @@ Note that buying on day 2 and selling on day 1 is not allowed because you must b
 
 - 1 <= prices.length <= 105
 - 0 <= prices[i] <= 104
+
+<u>**Solution 7:**</u>
+
+**1. Approach I: Brute Force Approach**
+
+    public int maxProfit(int[] prices) {
+        if (prices.length == 0) {
+            return 0;
+        }
+
+        int bestBuy = prices[0], maxProfit = 0;
+
+        for (int i=1; i<prices.length; i++) {
+            if (bestBuy < prices[i]) {
+                maxProfit = maxProfit > (prices[i] - bestBuy) ? maxProfit : prices[i] - bestBuy;
+            }
+
+            bestBuy = bestBuy < prices[i] ? bestBuy : prices[i] ;
+        }
+
+        return maxProfit;
+    }
+
+In this approach -
+
+- We have assumed each day as a selling day, therefore <code>i<sup>th</sup></code> day is the selling day.
+
+- For each selling day, computed the best buy day with minimum value in the array of range `0 to i-1` and updated the maximum profit and best buy price as well.
+
+- For detailed understanding, refer to this [video](https://youtu.be/WBzZCm46mFo?t=840)
+
+<br/>
+
+There is another brute force approach where -
+
+- We can calculate the profit for each day by looking at the array afterwards the <code>i<sup>th</sup></code> day and keep it in another array
+- After completing the loop for profit calculation for each day, we can run another loop to find the maximum profit among all profits for each day.
+- In this approach <code>(refer to this [video](https://youtu.be/E2-heUEnZKU?t=204) for complete understanding of approach discussed)</code>, we are going forward in the array for calulating the profit.
+- But there is still space for optimization as in this solution, we are going with the loops with complexity `O(n)` for two times.
+
+**2. Approach II: Optimized Approach**
+
+We are looping for once and calculating `buyPrice`, `currentProfit` and `maxProfit` each time.
+
+In the end, we will get the solution with effective code and lesser loops.
+
+    public int maxProfit(int[] prices) {
+        int buyPrice = prices[0], maxProfit = 0, currentProfit = 0;
+
+        for (int i=1; i<prices.length; i++) {
+            // we are updating buy price when getting lesser one
+            if (buyPrice > prices[i]) {
+                buyPrice = prices[i];
+            }
+            // if buy price is updated the computations will not
+            // take place as the buying and selling days cannot
+            // be the same day.
+            else {
+                currentProfit = prices[i] - buyPrice;
+                maxProfit = Math.max(currentProfit, maxProfit);
+            }
+        }
+
+        return maxProfit;
+    }
