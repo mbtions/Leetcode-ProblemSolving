@@ -517,6 +517,8 @@ We are looping for once and calculating `buyPrice`, `currentProfit` and `maxProf
 
 In the end, we will get the solution with effective code and lesser loops.
 
+Refer to this [video](https://youtu.be/E2-heUEnZKU?t=347) for better understanding of the code solution below:
+
     public int maxProfit(int[] prices) {
         int buyPrice = prices[0], maxProfit = 0, currentProfit = 0;
 
