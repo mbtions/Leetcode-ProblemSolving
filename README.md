@@ -36,11 +36,11 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
 
 **Constraints:**
 
-- nums1.length == m + n
-- nums2.length == n
-- 0 <= m, n <= 200
-- 1 <= m + n <= 200
-- -109 <= nums1[i], nums2[j] <= 109
+- <code>nums1.length == m + n</code>
+- <code>nums2.length == n</code>
+- <code>0 <= m, n <= 200</code>
+- <code>1 <= m + n <= 200</code>
+- <code>-10<sup>9</sup> <= nums1[i], nums2[j] <= 10<sup>9</sup></code>
 
 **Follow up:** Can you come up with an algorithm that runs in O(m + n) time?
 
@@ -49,7 +49,7 @@ _Acceptance Rate 53.0%_
 
 After brainstorming and trying code for about an hour and a half, referred to this [Video](https://www.youtube.com/watch?v=TTWKBqG-6IU) for code intuition.
 
-<u>**Solution:**</u>
+<u>**Solution 1:**</u>
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int A = m - 1, B = n - 1, C = m + n - 1;
@@ -112,9 +112,9 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 **Constraints:**
 
-- 0 <= nums.length <= 100
-- 0 <= nums[i] <= 50
-- 0 <= val <= 100
+- <code>0 <= nums.length <= 100</code>
+- <code>0 <= nums[i] <= 50</code>
+- <code>0 <= val <= 100</code>
 
 <u>**Solution 2:**</u>
 
@@ -173,11 +173,11 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 **Constraints:**
 
-- 1 <= nums.length <= 3 \* 104
-- -100 <= nums[i] <= 100
-- nums is sorted in non-decreasing order.
+- <code>1 <= nums.length <= 3 \* 10<sup>4</sup></code>
+- <code>-100 <= nums[i] <= 100</code>
+- <code>nums is sorted in non-decreasing order.</code>
 
-**Solution 3:**
+<u>**Solution 3:**</u>
 
     public int removeDuplicates(int[] nums) {
         int count = 0;
@@ -242,9 +242,9 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 **Constraints:**
 
-- 1 <= nums.length <= 3 \* 104
-- -104 <= nums[i] <= 104
-- nums is sorted in non-decreasing order.
+- <code>1 <= nums.length <= 3 \* 10<sup>4</sup></code>
+- <code>-104 <= nums[i] <= 10<sup>4</sup></code>
+- <code>nums is sorted in non-decreasing order.</code>
 
 <u>**Solution 4:**</u>
 
@@ -296,9 +296,9 @@ You may assume that the majority element always exists in the array.
 
 **Constraints:**
 
-- n == nums.length
-- 1 <= n <= 5 \* 104
-- -109 <= nums[i] <= 109
+- <code>n == nums.length</code>
+- <code>1 <= n <= 5 \* 10<sup>4</sup></code>
+- <code>-10<sup>9</sup> <= nums[i] <= 10<sup>9</sup></code>
 
 **Follow-up:** Could you solve the problem in linear time and in O(1) space?
 
@@ -379,9 +379,9 @@ rotate 2 steps to the right: [3,99,-1,-100]
 
 **Constraints:**
 
-- 1 <= nums.length <= 105
-- -231 <= nums[i] <= 231 - 1
-- 0 <= k <= 105
+- <code>1 <= nums.length <= 10<sup>5</sup></code>
+- <code>-2<sup>31</sup> <= nums[i] <= 2<sup>31</sup> - 1</code>
+- <code>0 <= k <= 10<sup>5</sup></code>
 
 **Follow up:**  
 Try to come up with as many solutions as you can. There are at least three different ways to solve this problem.
@@ -469,8 +469,8 @@ Note that buying on day 2 and selling on day 1 is not allowed because you must b
 
 **Constraints:**
 
-- 1 <= prices.length <= 105
-- 0 <= prices[i] <= 104
+- <code>1 <= prices.length <= 10<sup>5</sup></code>
+- <code>0 <= prices[i] <= 10<sup>4</sup></code>
 
 <u>**Solution 7:**</u>
 
@@ -538,3 +538,39 @@ Refer to this [video](https://youtu.be/E2-heUEnZKU?t=347) for better understandi
 
         return maxProfit;
     }
+
+**July 12, 2025**
+
+**<span style="color:orange; background-color:rgb(244, 235, 219); border-radius: 8px; padding: 5px;">Medium</span><br/>**
+**Question 8:**
+
+<u>**122. Best Time to Buy and Sell Stock II**</u>
+
+You are given an array `prices` where `prices[i]` is the price of a given stock on the <code>i<sup>th</sup></code> day.
+
+On each day, you may decide to buy and/or sell the stock. You can only hold at most one share of the stock at any time. However, you can buy it then immediately sell it on the same day.
+
+Find and return the maximum profit you can achieve.
+
+<u>**Example 1:**</u>  
+**Input:** prices = [7,1,5,3,6,4]  
+**Output:** 7  
+**Explanation:** Buy on day 2 (`price = 1`) and sell on day 3 (`price = 5`), profit = 5-1 = 4.  
+Then buy on day 4 (`price = 3`) and sell on day 5 (`price = 6`), profit = 6-3 = 3.  
+Total profit is `4 + 3 = 7`.
+
+<u>**Example 2:**</u>
+**Input:** prices = [1,2,3,4,5]  
+**Output:** 4  
+**Explanation:** Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5-1 = 4.  
+Total profit is 4.
+
+<u>**Example 3:**</u>  
+**Input:** prices = [7,6,4,3,1]  
+**Output:** 0  
+**Explanation:** There is no way to make a positive profit, so we never buy the stock to achieve the maximum profit of `0`.
+
+**Constraints:**
+
+- <code>1 <= prices.length <= 3 \* 10<sup>4</sup></code>
+- <code>0 <= prices[i] <= 10<sup>4</sup></code>
