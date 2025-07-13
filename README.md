@@ -592,6 +592,7 @@ Total profit is 4.
 
 **July 13, 2025**
 
+**<span style="color:orange; background-color:rgb(244, 235, 219); border-radius: 8px; padding: 5px;">Medium</span><br/>**
 **Question 9**
 
 <u>**55. Jump Game**</u>
