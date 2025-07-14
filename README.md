@@ -615,3 +615,23 @@ Return `true` if you can reach the last index, or `false` otherwise.
 
 - <code>1 <= nums.length <= 10<sup>4</sup></code>
 - <code>0 <= nums[i] <= 10<sup>5</sup></code>
+
+<u>**Solution 9:**</u>
+
+    public boolean canJump(int[] nums) {
+        // goal index
+        int g = nums.length - 1;
+        // if you are able to reach from
+        // goal = last index to goal = first index
+        // then you will found a solution
+        for (int i=nums.length-2; i>=0; i--) {
+            if (i + nums[i] >= g) {
+                g = i;
+            }
+        }
+        return g == 0;
+    }
+
+It is a very simple approach where we have gone from goal = last index to the position first index.
+
+If the first index is reachable from goal then `canJump()` returns `true`, otherwise returns `false`.
