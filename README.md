@@ -666,3 +666,97 @@ Return the minimum number of jumps to reach nums[n - 1]. The test cases are gene
 - <code>1 <= nums.length <= 10<sup>4</sup></code>
 - <code>0 <= nums[i] <= 1000</code>
 - It's guaranteed that you can reach <code>nums[n - 1].</code>
+
+<u>**Solution 10:**</u>
+
+    class Solution {
+        public int jump(int[] nums) {
+
+            // Initially the user starts from first index
+            // i.e. i=0, therefore the current end & farthest
+            // are first index only and jumps count is zero.
+            int jumps = 0;
+            int currentEnd = 0;
+            int currentFarthest = 0;
+
+            for (int i=0; // from first index
+                i < nums.length - 1;
+                // we only need to access till second last index for counting jumps
+                i++
+            ) {
+                // calculate the farthest position possible
+                // for current index
+                currentFarthest = Math.max(currentFarthest, i + nums[i]);
+
+                // On reaching currentEnd,
+                // if found better option, in-between [i, currentEnd],
+                // with jump to the more farther position than currentEnd
+                // then update currentEnd to the currentFarthest
+                if (i == currentEnd) {
+                    jumps++;
+                    currentEnd = currentFarthest;
+                }
+            }
+            return jumps;
+        }
+    }
+
+The approach mentioned above is very simple.
+
+1. Initially, the user assumes the end and farthest position to be the same first index only.
+
+   `int currentEnd = 0;`  
+   `int currentFarthest = 0`  
+   `int jumps = 0;`
+
+2. Loop iterates from `i = 0` to `i = nums.length - 2`.  
+   **Note:** `nums[nums.length - 1]` is goal position and it is not required to be accessed hence it is not there in the iteration range.
+
+3. Now, calculate the farthest position possible in single jump.
+
+   **Example:**  
+   For nums = [ 4, 2, 1, 3, 6, 1, 2 ]; nums.length = 7
+
+   `nums.length - 1 = 6`
+
+   For `i = 0 && i < 6, currentEnd = 0, currentFarthest = 0`,
+   <pre> currentFarthest = max(0, 0 + 4) = 4
+   
+   i == currentEnd => true
+   :.  currentEnd = 4    </pre>
+
+   Iterate till `currentEnd = 4` and find more better jump option with farthest position as compared to `currentEnd`
+
+   For `i = 1 and i < 6 => true, currentEnd = 4, currentFarthest = 0`,
+   <pre>currentFarthest = max(4, 1 + 2) = 4
+   
+   i == currentEnd => false</pre>
+
+   For `i = 2 and i < 6 => true, currentEnd = 4, currentFarthest = 4`,
+   <pre>currentFarthest = max(4, 2 + 1) = 4
+   
+   i == currentEnd => false</pre>
+
+   For `i = 3 and i < 6 => true, currentEnd = 4, currentFarthest = 4`,
+   <pre>currentFarthest = max(4, 3 + 3) = 6
+   
+   i == currentEnd => false</pre>
+
+   For `i = 4 and i < 6 => true, currentEnd = 4, currentFarthest = 6`,
+   <pre>currentFarthest = max(6, 4 + 6) = 10
+   
+   i == currentEnd => true
+   :. currentEnd = 10</pre>
+
+   For `i = 5 and i < 6 => true, currentEnd = 10, currentFarthest = 10`,
+   <pre>currentFarthest = max(10, 5 + 1) = 10
+   
+   i == currentEnd => false</pre>
+
+   For `i = 6 and i < 6 => false`  
+   `currentEnd = 10, currentFarthest = 10`  
+   loop condition fails.
+
+4. The loop checks for better options and updates the currentEnd if found at in the end and increments `jumps`.
+
+5. The answer is found with minimum number of jumps.
