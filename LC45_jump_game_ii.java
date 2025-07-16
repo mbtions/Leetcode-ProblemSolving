@@ -1,5 +1,8 @@
 class LC45_jump_game_ii {
     public static int jump(int[] nums) {
+        if (nums.length == 1 || nums.length == 0) {
+            return 0;
+        }
         // Initially the user starts from first index
         // i.e. i=0, therefore the current end & farthest
         // are first index only and jumps count is zero.
