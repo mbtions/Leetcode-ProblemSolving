@@ -763,3 +763,30 @@ The approach mentioned above is very simple.
 4. The loop checks for better options and updates the currentEnd if found at in the end and increments `jumps`.
 
 5. The answer is found with minimum number of jumps.
+
+**July 17, 2025**
+
+**<span style="color:orange; background-color:rgb(244, 235, 219); border-radius: 8px; padding: 5px;">Medium</span><br/>**
+**Question 11**
+
+<u>**274. H-Index**</u>
+
+Given an array of integers `citations` where `citations[i]` is the number of citations a researcher received for their <code>i<sup>th<sup></code> paper, return the researcher's h-index.
+
+According to the [definition of h-index on Wikipedia](https://en.wikipedia.org/wiki/H-index): The h-index is defined as the maximum value of `h` such that the given researcher has published at least `h` papers that have each been cited at least `h` times.
+
+<u>**Example 1:**</u>  
+**Input:** citations = [3,0,6,1,5]  
+**Output:** 3  
+**Explanation:** [3,0,6,1,5] means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively.  
+Since the researcher has 3 papers with at least 3 citations each and the remaining two with no more than 3 citations each, their h-index is 3.
+
+<u>**Example 2:**</u>  
+**Input:** citations = [1,3,1]  
+**Output:** 1
+
+**Constraints:**
+
+- `n == citations.length`
+- `1 <= n <= 5000`
+- `0 <= citations[i] <= 1000`

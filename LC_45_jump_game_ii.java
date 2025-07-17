@@ -1,4 +1,4 @@
-class LC45_jump_game_ii {
+class LC_45_jump_game_ii {
     public static int jump(int[] nums) {
         if (nums.length == 1 || nums.length == 0) {
             return 0;
