@@ -821,3 +821,53 @@ Since the researcher has 3 papers with at least 3 citations each and the remaini
 - Comparing each paper's citations number with every other and counting.
 
 - If count is greater or equal than the citations number then update `h` otherwise, update with maximum of `count` value and `h` value.
+
+**2. Optimized Approach**
+
+    public int hIndex(int[] citations) {
+        // total number of papers
+        int n = citations.length;
+
+        // frequency of paper per number of citations
+        // where freq[i] is the number of papers
+        // with total "i" citations
+        int[] freq = new int[n+1];
+        // initially, freq = [0, 0, 0, ...]
+
+        // counting number of papers with i citations
+        for (int i = 0; i < n; i++) {
+            // when number of citations is more
+            // than the number of papers
+            // increment last element of freq[]
+            if (citations[i] >= n) {
+                freq[n] += 1;
+            }
+            // otherwise increment the number of papers
+            // for i'th citation
+            else {
+                freq[citations[i]] += 1;
+            }
+        }
+
+        // last index of freq
+        int idx = n;
+        // frequency of papers with citations
+        // equal to or greater than 'n'
+        int s = freq[n];
+
+        // traverse high to low citations until reach
+        // the index where 'h' is found
+        while (s < idx) {
+            idx--;
+            s += freq[idx];
+        }
+
+        return idx;
+    }
+
+- In this approach, first we have found out the frequencies of papers with `i` citations
+
+- Then we have traversed the frequencies of papers from high citations to low citations (i.e., loop `freq` in reverse order).  
+  when reached the break point where number of papers are found such that h-index is followed, it is returned.
+
+- Go through the comments in the above solution to understand better.
