@@ -790,3 +790,34 @@ Since the researcher has 3 papers with at least 3 citations each and the remaini
 - `n == citations.length`
 - `1 <= n <= 5000`
 - `0 <= citations[i] <= 1000`
+
+<u>**Solution 11:**</u>
+
+**1. Approach 1: Brute Force Approach [O(n)]**
+
+    public int hIndex(int[] citations) {
+        int h = 0;
+
+        if (citations.length == 1 && citations[0] == 0)
+            return 0;
+
+        for (int i = 0; i < citations.length; i++) {
+            int count = 0;
+            for (int j = 0; j < citations.length; j++) {
+                if (citations[i] <= citations[j]) {
+                    count++;
+                }
+            }
+
+            if (count >= citations[i]) {
+                h = Math.max(h, citations[i]);
+            } else {
+                h = Math.max(h, count);
+            }
+        }
+        return h;
+    }
+
+- Comparing each paper's citations number with every other and counting.
+
+- If count is greater or equal than the citations number then update `h` otherwise, update with maximum of `count` value and `h` value.
