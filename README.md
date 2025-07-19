@@ -917,3 +917,35 @@ randomizedSet.getRandom(); // Since 2 is the only number in the set, getRandom()
 - <code>-2<sup>31</sup> <= val <= 2<sup>31</sup> - 1</code>
 - At most <code>2 \* 10<sup>5</sup></code> calls will be made to insert, remove, and getRandom.
 - There will be at least one element in the data structure when getRandom is called.
+
+<u>**Solution 11:**</u>
+
+**1. Brute Force Approach:**
+
+    class RandomizedSet {
+        Set<Integer> randomSet;
+
+        public RandomizedSet() {
+            randomSet = new HashSet<Integer>();
+        }
+
+        public boolean insert(int val) {
+            if (randomSet.contains(val))
+                return false;
+            randomSet.add(val);
+            return true;
+        }
+
+        public boolean remove(int val) {
+            if (!randomSet.contains(val))
+                return false;
+            randomSet.remove(val);
+            return true;
+        }
+
+        public int getRandom() {
+            Integer[] arr = randomSet.toArray(new Integer[randomSet.size()]);
+            int idx = new Random().nextInt(arr.length);
+            return arr[idx];
+        }
+    }
