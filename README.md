@@ -1018,9 +1018,7 @@ You must write an algorithm that runs in `O(n)` time and without using the divis
         return ans;
     }
 
-**Time Complexity:** <code>O(n<sup>2</sup>)</code>
-
--
+## **Time Complexity:** <code>O(n<sup>2</sup>)</code>
 
 - Above code represents a little lengthy solution which can be improved  
   some of the improved approaches can be -
