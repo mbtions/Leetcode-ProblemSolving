@@ -15,22 +15,22 @@ Merge nums1 and nums2 into a single array sorted in non-decreasing order.
 
 The final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
 
-**Example 1:**  
+<u>**Example 1:**</u>  
 **Input:** nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3  
 **Output:** [1,2,2,3,5,6]  
 **Explanation:** The arrays we are merging are [1,2,3] and [2,5,6].  
 The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
 
-**Example 2:**  
+<u>**Example 2:**</u>  
 **Input:** nums1 = [1], m = 1, nums2 = [], n = 0  
 **Output:** [1]  
 **Explanation:** The arrays we are merging are [1] and [].  
 The result of the merge is [1].
 
-**Example 3:**  
+<u>**Example 3:**</u>  
 **Input:** nums1 = [0], m = 0, nums2 = [1], n = 1  
 **Output:** [1]  
-Explanation: The arrays we are merging are [] and [1].  
+**Explanation:** The arrays we are merging are [] and [1].  
 The result of the merge is [1].
 Note that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1.
 
@@ -44,12 +44,9 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
 
 **Follow up:** Can you come up with an algorithm that runs in O(m + n) time?
 
-_Accepted 4,702,303/8.9M_  
-_Acceptance Rate 53.0%_
+<u>**Solution 1:**</u>
 
 After brainstorming and trying code for about an hour and a half, referred to this [Video](https://www.youtube.com/watch?v=TTWKBqG-6IU) for code intuition.
-
-<u>**Solution 1:**</u>
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int A = m - 1, B = n - 1, C = m + n - 1;
@@ -64,6 +61,8 @@ After brainstorming and trying code for about an hour and a half, referred to th
             C--;
         }
     }
+
+<hr>
 
 **July 06, 2025**
 
@@ -129,6 +128,8 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
         return count;
     }
+
+<hr>
 
 **July 07, 2025**
 
@@ -198,6 +199,8 @@ It does not matter what you leave beyond the returned k (hence they are undersco
         return count+1;
     }
 
+<hr>
+
 **July 08, 2025**
 
 **<span style="color:orange; background-color:rgb(244, 235, 219); border-radius: 8px; padding: 5px;">Medium</span><br/>**
@@ -207,7 +210,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 Given an integer array nums sorted in non-decreasing order, remove some duplicates in-place such that each unique element appears at most twice. The relative order of the elements should be kept the same.
 
-Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the first part of the array nums. More formally, if there are k elements after removing the duplicates, then the first k elements of nums should hold the final result. It does not matter what you leave beyond the first k elements.
+Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the first part of the array nums. More formally, if there are k elements after removing the duplicates, then the first `k` elements of nums should hold the final result. It does not matter what you leave beyond the first k elements.
 
 Return k after placing the final result in the first k slots of nums.
 
@@ -273,6 +276,8 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
         return count + 1;
     }
+
+<hr>
 
 **July 09, 2025**
 
@@ -352,6 +357,8 @@ In this question, for the follow-up to be fulfilled, you need to look for the Bo
                 count += (num==candidate) ? 1 : -1;
             }
         }
+
+<hr>
 
 **July 10, 2025**
 
@@ -443,6 +450,8 @@ Now after final reverse of the remaining part, we get `nums = [5,6,7,1,2,3,4]`. 
         }
     }
 
+<hr>
+
 **July 11, 2025**
 
 **<span style="color:green; background-color:#003300; border-radius: 8px; padding: 5px;">Easy</span><br/>**
@@ -457,9 +466,9 @@ You want to maximize your profit by choosing a single day to buy one stock and c
 Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return `0`.
 
 <u>**Example 1:**</u>  
-**Input:** prices = [7,1,5,3,6,4]
-**Output:** 5
-**Explanation:** Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+**Input:** prices = [7,1,5,3,6,4]  
+**Output:** 5  
+**Explanation:** Buy on day 2 (`price = 1`) and sell on day 5 (`price = 6`), `profit = 6-1 = 5`.  
 Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
 
 <u>**Example 2:**</u>  
@@ -539,6 +548,8 @@ Refer to this [video](https://youtu.be/E2-heUEnZKU?t=347) for better understandi
         return maxProfit;
     }
 
+<hr>
+
 **July 12, 2025**
 
 **<span style="color:orange; background-color:rgb(244, 235, 219); border-radius: 8px; padding: 5px;">Medium</span><br/>**
@@ -589,6 +600,8 @@ Total profit is 4.
 
         return totalProfit;
     }
+
+<hr>
 
 **July 13, 2025**
 
@@ -764,6 +777,8 @@ The approach mentioned above is very simple.
 
 5. The answer is found with minimum number of jumps.
 
+<hr>
+
 **July 17, 2025**
 
 **<span style="color:orange; background-color:rgb(244, 235, 219); border-radius: 8px; padding: 5px;">Medium</span><br/>**
@@ -872,6 +887,8 @@ Since the researcher has 3 papers with at least 3 citations each and the remaini
 
 - Go through the comments in the above solution to understand better.
 
+<hr>
+
 **July 19, 2025**
 
 **<span style="color:orange; background-color:rgb(244, 235, 219); border-radius: 8px; padding: 5px;">Medium</span><br/>**
@@ -950,6 +967,8 @@ randomizedSet.getRandom(); // Since 2 is the only number in the set, getRandom()
         }
     }
 
+<hr>
+
 **July 20, 2025**
 
 **<span style="color:orange; background-color:rgb(244, 235, 219); border-radius: 8px; padding: 5px;">Medium</span><br/>**
@@ -964,7 +983,7 @@ The product of any prefix or suffix of `nums` is guaranteed to fit in a 32-bit i
 You must write an algorithm that runs in `O(n)` time and without using the division operation.
 
 <u>**Example 1:**</u>  
-**Input:** nums = [1,2,3,4]
+**Input:** nums = [1,2,3,4]  
 **Output:** [24,12,8,6]
 
 <u>**Example 2:**</u>  
@@ -978,3 +997,65 @@ You must write an algorithm that runs in `O(n)` time and without using the divis
 - The input is generated such that `answer[i]` is guaranteed to fit in a 32-bit integer.
 
 **Follow up:** Can you solve the problem in `O(1)` extra space complexity? (The output array does not count as extra space for space complexity analysis.)
+
+<u>**Solution 13:**</u>
+
+**1. Approach I: Brute Force Approach**
+
+    public int[] productExceptSelf(int[] nums) {
+        int ans[] = new int[nums.length];
+
+        for (int i=0; i<nums.length; i++) {
+            int prod = 1;
+            for (int j=0; j<nums.length; j++) {
+                // skip product when same element
+                if (i == j) continue;
+
+                prod *= nums[i];
+            }
+            ans[i] = prod;
+        }
+        return ans;
+    }
+
+**Time Complexity:** <code>O(n<sup>2</sup>)</code>
+
+-
+
+- Above code represents a little lengthy solution which can be improved  
+  some of the improved approaches can be -
+  - Divide each number by the totalProduct of all numbers in the array, but it might cause an arithmetic exception (`/ by zero`) in case of number `0` as array element.
+  - Another approach can be by keeping separate products for prefix and suffix of `i` element, and then `prefix[i]*suffix[i]` is stored in `nums[i]`.  
+    But it may cause **extra space** for prefix and suffix arrays. Whereas both the suffix and prefix can be calculated and kept there in the `ans` array itself. Refer to the optimal approach.
+
+**2. Approach II: Optimal Solution**
+
+    public int[] productExceptSelf(int[] nums) {
+        int[] ans = new int[nums.length];
+        Arrays.fill(ans, 1);
+
+        // Step 1: Calculate Prefix products
+        for (int i = 0, curr = 1; i < nums.length; i++) {
+            ans[i] *= curr;
+            curr *= nums[i];
+        }
+
+        // Step 2: Calculate and Multiply Suffix products in Prefix products stored in
+        // ans array
+        for (int i = nums.length - 1, curr = 1; i >= 0; i--) {
+            ans[i] *= curr;
+            curr *= nums[i];
+        }
+
+        return ans;
+    }
+
+## **Time complexity:** `O(n)`
+
+We reach this approach after reaching to the intuition that we can keep prefix and suffix product of `i` element even without extra spaces.
+
+We employed two loops -
+
+- First loop for the prefix product computation and storing in `ans` array.
+- Second loop for the suffix product computation and multiply with `ans[i]` and hence updating the final **answer** as `prefix * suffix` in `ans[i]`.
+- Finally after both the loops, we will get the product array except self which is then returned.
