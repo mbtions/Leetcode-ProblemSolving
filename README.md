@@ -1100,3 +1100,30 @@ Therefore, you can't travel around the circuit once no matter where you start.
 - `1 <= n <= 105`
 - <code>0 <= gas[i], cost[i] <= 10<sup>4</sup></code>
 - The input is generated such that the answer is unique.
+
+<u>**Solution 14:**</u>
+
+    public int canCompleteCircuit(int[] gas, int[] cost) {
+        int totalCost = 0, totalGas = 0;
+        for (int i=0; i<gas.length; i++) {
+            totalGas += gas[i];
+            totalCost += cost[i];
+        }
+
+        if (totalGas < totalCost) {
+            return -1;
+        }
+
+        int startIndex = 0, currentGas = 0;
+
+        for (int i=0; i<gas.length; i++) {
+            currentGas += gas[i] - cost[i];
+
+            if (currentGas < 0) {
+                startIndex = i + 1;
+                currentGas = 0;
+            }
+        }
+
+        return startIndex;
+    }
