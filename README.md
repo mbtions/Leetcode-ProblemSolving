@@ -1097,9 +1097,9 @@ Therefore, you can't travel around the circuit once no matter where you start.
 **Constraints:**
 
 - `n == gas.length == cost.length`
-- `1 <= n <= 105`
+- <code>1 <= n <= 10<sup>5</sup></code>
 - <code>0 <= gas[i], cost[i] <= 10<sup>4</sup></code>
-- The input is generated such that the answer is unique.
+- The input is generated such that the answer is **unique**.
 
 <u>**Solution 14:**</u>
 
@@ -1127,3 +1127,49 @@ Therefore, you can't travel around the circuit once no matter where you start.
 
         return startIndex;
     }
+
+In the approach discussed in the above code, there are two steps which include:
+
+- **Step 1:**  
+  Check whether the total gas available is actually equal or more than the cost of gas to be consumed.  
+   If **yes**  
+   then the solution is possible  
+   otherwise return `-1` as no solution possible.
+
+- **Step 2:**  
+  When solution is guaranteed then search for the `startIndex` which satisfies the cycle.
+
+---
+
+**July 23, 2025**
+
+**<span style="color:maroon; background-color:rgba(241, 180, 180, 1); border-radius: 8px; padding: 5px;">Hard</span><br/>**
+**Question 15:**
+
+<u>**135. Candy**</u>
+
+There are `n` children standing in a line. Each child is assigned a rating value given in the integer array `ratings`.
+
+You are giving candies to these children subjected to the following requirements:
+
+Each child must have at least one candy.
+Children with a higher rating get more candies than their neighbors.
+
+Return _the minimum number of candies you need to have to distribute the candies to the children._
+
+<u>**Example 1:**</u>  
+**Input:** ratings = [1,0,2]  
+**Output:** 5  
+**Explanation:** You can allocate to the first, second and third child with 2, 1, 2 candies respectively.
+
+<u>**Example 2:**</u>  
+**Input:** ratings = [1,2,2]  
+**Output:** 4  
+**Explanation:** You can allocate to the first, second and third child with 1, 2, 1 candies respectively.  
+The third child gets 1 candy because it satisfies the above two conditions.
+
+**Constraints:**
+
+- `n == ratings.length`
+- <code>1 <= n <= 2 \* 10<sup>4</sup></code>
+- <code>0 <= ratings[i] <= 2 \* 10<sup>4</sup></code>
