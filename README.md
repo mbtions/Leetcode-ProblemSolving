@@ -2,6 +2,108 @@
 
 [Top 150 Leetcode Questions](https://leetcode.com/studyplan/top-interview-150/)
 
+---
+
+<table>
+    <tr>
+        <th>S. No.</th>
+        <th>Leetcode Problem</th>
+        <th>Difficulty</th>
+        <th>Link</th>
+    </tr>
+    <tr>
+        <td>1.</td>
+        <td><a href="#sol1" title="Jump To Solution">88. Merge Sorted Array</a></td>
+        <td>Easy</td>
+        <td><a href="">Link</a></td>
+    </tr>
+    <tr>
+        <td>2.</td>
+        <td><a href="#sol2" title="Jump To Solution">27. Remove Element</a></td>
+        <td>Easy</td>
+        <td><a href="">Link</a></td>
+    </tr>
+    <tr>
+        <td>3.</td>
+        <td><a href="#sol3" title="Jump To Solution">26. Remove Duplicates from Sorted Array</a></td>
+        <td>Easy</td>
+        <td><a href="">Link</a></td>
+    </tr>
+    <tr>
+        <td>4.</td>
+        <td><a href="#sol4" title="Jump To Solution">80. Remove Duplicates from Sorted Array II</a></td>
+        <td>Easy</td>
+        <td><a href="">Link</a></td>
+    </tr>
+    <tr>
+        <td>5.</td>
+        <td><a href="#sol5" title="Jump To Solution">169. Majority Element</a></td>
+        <td>Easy</td>
+        <td><a href="">Link</a></td>
+    </tr>
+    <tr>
+        <td>6.</td>
+        <td><a href="#sol6" title="Jump To Solution">189. Rotate Array</a></td>
+        <td>Medium</td>
+        <td><a href="">Link</a></td>
+    </tr>
+    <tr>
+        <td>7.</td>
+        <td><a href="#sol7" title="Jump To Solution">121. Best Time to Buy and Sell Stock</a></td>
+        <td>Easy</td>
+        <td><a href="">Link</a></td>
+    </tr>
+    <tr>
+        <td>8.</td>
+        <td><a href="#sol8" title="Jump To Solution">122. Best Time to Buy and Sell Stock II</a></td>
+        <td>Medium</td>
+        <td><a href="">Link</a></td>
+    </tr><tr>
+        <td>9.</td>
+        <td><a href="#sol9" title="Jump To Solution">55. Jump Game</a></td>
+        <td>Medium</td>
+        <td><a href="">Link</a></td>
+    </tr>
+    <tr>
+        <td>10.</td>
+        <td><a href="#sol10" title="Jump To Solution">88. Merge Sorted Array</a></td>
+        <td>Easy</td>
+        <td><a href="">Link</a></td>
+    </tr>
+    <tr>
+        <td>11.</td>
+        <td><a href="#sol11" title="Jump To Solution">274. H-Index</a></td>
+        <td>Medium</td>
+        <td><a href="">Link</a></td>
+    </tr>
+    <tr>
+        <td>12.</td>
+        <td><a href="#sol12" title="Jump To Solution">380. Insert Delete GetRandom O(1)</a></td>
+        <td>Medium</td>
+        <td><a href="">Link</a></td>
+    </tr>
+    <tr>
+        <td>13.</td>
+        <td><a href="#sol13" title="Jump To Solution">238. Product of Array Except Self</a></td>
+        <td>Medium</td>
+        <td><a href="">Link</a></td>
+    </tr>
+    <tr>
+        <td>14.</td>
+        <td><a href="#sol14" title="Jump To Solution">134. Gas Station</a></td>
+        <td>Medium</td>
+        <td><a href="">Link</a></td>
+    </tr>
+    <tr>
+        <td>15.</td>
+        <td><a href="#sol15" title="Jump To Solution">135. Candy</a></td>
+        <td>Hard</td>
+        <td><a href="">Link</a></td>
+    </tr>
+</table>
+
+---
+
 **July 04, 2025**
 
 **<span style="color:green; background-color:#003300; border-radius: 8px; padding: 5px;">Easy</span><br/>**
@@ -44,7 +146,7 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
 
 **Follow up:** Can you come up with an algorithm that runs in O(m + n) time?
 
-<u>**Solution 1:**</u>
+<u id="sol1">**Solution 1:**</u>
 
 After brainstorming and trying code for about an hour and a half, referred to this [Video](https://www.youtube.com/watch?v=TTWKBqG-6IU) for code intuition.
 
@@ -62,7 +164,7 @@ After brainstorming and trying code for about an hour and a half, referred to th
         }
     }
 
-<hr>
+---
 
 **July 06, 2025**
 
@@ -115,7 +217,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 - <code>0 <= nums[i] <= 50</code>
 - <code>0 <= val <= 100</code>
 
-<u>**Solution 2:**</u>
+<u id="sol2">**Solution 2:**</u>
 
     public int removeElement(int[] nums, int val) {
         int count = 0;
@@ -129,7 +231,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
         return count;
     }
 
-<hr>
+---
 
 **July 07, 2025**
 
@@ -178,7 +280,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 - <code>-100 <= nums[i] <= 100</code>
 - <code>nums is sorted in non-decreasing order.</code>
 
-<u>**Solution 3:**</u>
+<u id="sol3">**Solution 3:**</u>
 
     public int removeDuplicates(int[] nums) {
         int count = 0;
@@ -199,7 +301,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
         return count+1;
     }
 
-<hr>
+---
 
 **July 08, 2025**
 
@@ -249,7 +351,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 - <code>-104 <= nums[i] <= 10<sup>4</sup></code>
 - <code>nums is sorted in non-decreasing order.</code>
 
-<u>**Solution 4:**</u>
+<u id="sol4">**Solution 4:**</u>
 
     public int removeDuplicates(int[] nums) {
         int count = 0, count2 = 1;
@@ -277,7 +379,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
         return count + 1;
     }
 
-<hr>
+---
 
 **July 09, 2025**
 
@@ -307,7 +409,7 @@ You may assume that the majority element always exists in the array.
 
 **Follow-up:** Could you solve the problem in linear time and in O(1) space?
 
-<u>**Solution 5:**</u>
+<u id="sol5">**Solution 5:**</u>
 
     public int majorityElement(int[] nums) {
         int majority = -1;
@@ -358,7 +460,7 @@ In this question, for the follow-up to be fulfilled, you need to look for the Bo
             }
         }
 
-<hr>
+---
 
 **July 10, 2025**
 
@@ -394,7 +496,7 @@ rotate 2 steps to the right: [3,99,-1,-100]
 Try to come up with as many solutions as you can. There are at least three different ways to solve this problem.
 Could you do it in-place with O(1) extra space?
 
-<u>**Solution 6:**</u>
+<u id="sol6">**Solution 6:**</u>
 
 **1. Approach I: Brute Force Approach**
 
@@ -450,7 +552,7 @@ Now after final reverse of the remaining part, we get `nums = [5,6,7,1,2,3,4]`. 
         }
     }
 
-<hr>
+---
 
 **July 11, 2025**
 
@@ -481,7 +583,7 @@ Note that buying on day 2 and selling on day 1 is not allowed because you must b
 - <code>1 <= prices.length <= 10<sup>5</sup></code>
 - <code>0 <= prices[i] <= 10<sup>4</sup></code>
 
-<u>**Solution 7:**</u>
+<u id="sol7">**Solution 7:**</u>
 
 **1. Approach I: Brute Force Approach**
 
@@ -548,7 +650,7 @@ Refer to this [video](https://youtu.be/E2-heUEnZKU?t=347) for better understandi
         return maxProfit;
     }
 
-<hr>
+---
 
 **July 12, 2025**
 
@@ -586,7 +688,7 @@ Total profit is 4.
 - <code>1 <= prices.length <= 3 \* 10<sup>4</sup></code>
 - <code>0 <= prices[i] <= 10<sup>4</sup></code>
 
-<u>**Solution 8:**</u>
+<u id="sol8">**Solution 8:**</u>
 
 **1. Greedy Approach**
 
@@ -601,7 +703,7 @@ Total profit is 4.
         return totalProfit;
     }
 
-<hr>
+---
 
 **July 13, 2025**
 
@@ -629,7 +731,7 @@ Return `true` if you can reach the last index, or `false` otherwise.
 - <code>1 <= nums.length <= 10<sup>4</sup></code>
 - <code>0 <= nums[i] <= 10<sup>5</sup></code>
 
-<u>**Solution 9:**</u>
+<u id="sol9">**Solution 9:**</u>
 
     public boolean canJump(int[] nums) {
         // goal index
@@ -680,7 +782,7 @@ Return the minimum number of jumps to reach nums[n - 1]. The test cases are gene
 - <code>0 <= nums[i] <= 1000</code>
 - It's guaranteed that you can reach <code>nums[n - 1].</code>
 
-<u>**Solution 10:**</u>
+<u id="sol10">**Solution 10:**</u>
 
     class Solution {
         public int jump(int[] nums) {
@@ -777,7 +879,7 @@ The approach mentioned above is very simple.
 
 5. The answer is found with minimum number of jumps.
 
-<hr>
+---
 
 **July 17, 2025**
 
@@ -806,7 +908,7 @@ Since the researcher has 3 papers with at least 3 citations each and the remaini
 - `1 <= n <= 5000`
 - `0 <= citations[i] <= 1000`
 
-<u>**Solution 11:**</u>
+<u id="sol11">**Solution 11:**</u>
 
 **1. Approach 1: Brute Force Approach [O(n)]**
 
@@ -887,7 +989,7 @@ Since the researcher has 3 papers with at least 3 citations each and the remaini
 
 - Go through the comments in the above solution to understand better.
 
-<hr>
+---
 
 **July 19, 2025**
 
@@ -935,7 +1037,7 @@ randomizedSet.getRandom(); // Since 2 is the only number in the set, getRandom()
 - At most <code>2 \* 10<sup>5</sup></code> calls will be made to insert, remove, and getRandom.
 - There will be at least one element in the data structure when getRandom is called.
 
-<u>**Solution 11:**</u>
+<u id="sol12">**Solution 12:**</u>
 
 **1. Brute Force Approach:**
 
@@ -967,7 +1069,7 @@ randomizedSet.getRandom(); // Since 2 is the only number in the set, getRandom()
         }
     }
 
-<hr>
+---
 
 **July 20, 2025**
 
@@ -998,7 +1100,7 @@ You must write an algorithm that runs in `O(n)` time and without using the divis
 
 **Follow up:** Can you solve the problem in `O(1)` extra space complexity? (The output array does not count as extra space for space complexity analysis.)
 
-<u>**Solution 13:**</u>
+<u id="sol13">**Solution 13:**</u>
 
 **1. Approach I: Brute Force Approach**
 
@@ -1101,7 +1203,7 @@ Therefore, you can't travel around the circuit once no matter where you start.
 - <code>0 <= gas[i], cost[i] <= 10<sup>4</sup></code>
 - The input is generated such that the answer is **unique**.
 
-<u>**Solution 14:**</u>
+<u id="sol14">**Solution 14:**</u>
 
     public int canCompleteCircuit(int[] gas, int[] cost) {
         int totalCost = 0, totalGas = 0;
@@ -1174,7 +1276,7 @@ The third child gets 1 candy because it satisfies the above two conditions.
 - <code>1 <= n <= 2 \* 10<sup>4</sup></code>
 - <code>0 <= ratings[i] <= 2 \* 10<sup>4</sup></code>
 
-<u>**Solution 15:**</u>
+<u id="sol15">**Solution 15:**</u>
 
     public int candy(int[] ratings) {
         int[] candies = new int[ratings.length];
