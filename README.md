@@ -15,90 +15,96 @@
         <td>1.</td>
         <td><a href="#sol1" title="Jump To Solution">88. Merge Sorted Array</a></td>
         <td>Easy</td>
-        <td><a href="">Link</a></td>
+        <td><a href="https://leetcode.com/problems/merge-sorted-array/description/?envType=study-plan-v2&envId=top-interview-150">Link</a></td>
     </tr>
     <tr>
         <td>2.</td>
         <td><a href="#sol2" title="Jump To Solution">27. Remove Element</a></td>
         <td>Easy</td>
-        <td><a href="">Link</a></td>
+        <td><a href="https://leetcode.com/problems/remove-element/description/?envType=study-plan-v2&envId=top-interview-150">Link</a></td>
     </tr>
     <tr>
         <td>3.</td>
         <td><a href="#sol3" title="Jump To Solution">26. Remove Duplicates from Sorted Array</a></td>
         <td>Easy</td>
-        <td><a href="">Link</a></td>
+        <td><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/?envType=study-plan-v2&envId=top-interview-150">Link</a></td>
     </tr>
     <tr>
         <td>4.</td>
         <td><a href="#sol4" title="Jump To Solution">80. Remove Duplicates from Sorted Array II</a></td>
-        <td>Easy</td>
-        <td><a href="">Link</a></td>
+        <td>Medium</td>
+        <td><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/?envType=study-plan-v2&envId=top-interview-150">Link</a></td>
     </tr>
     <tr>
         <td>5.</td>
         <td><a href="#sol5" title="Jump To Solution">169. Majority Element</a></td>
         <td>Easy</td>
-        <td><a href="">Link</a></td>
+        <td><a href="https://leetcode.com/problems/majority-element/?envType=study-plan-v2&envId=top-interview-150">Link</a></td>
     </tr>
     <tr>
         <td>6.</td>
         <td><a href="#sol6" title="Jump To Solution">189. Rotate Array</a></td>
         <td>Medium</td>
-        <td><a href="">Link</a></td>
+        <td><a href="https://leetcode.com/problems/rotate-array/description/?envType=study-plan-v2&envId=top-interview-150">Link</a></td>
     </tr>
     <tr>
         <td>7.</td>
         <td><a href="#sol7" title="Jump To Solution">121. Best Time to Buy and Sell Stock</a></td>
         <td>Easy</td>
-        <td><a href="">Link</a></td>
+        <td><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/?envType=study-plan-v2&envId=top-interview-150">Link</a></td>
     </tr>
     <tr>
         <td>8.</td>
         <td><a href="#sol8" title="Jump To Solution">122. Best Time to Buy and Sell Stock II</a></td>
         <td>Medium</td>
-        <td><a href="">Link</a></td>
+        <td><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/?envType=study-plan-v2&envId=top-interview-150">Link</a></td>
     </tr><tr>
         <td>9.</td>
         <td><a href="#sol9" title="Jump To Solution">55. Jump Game</a></td>
         <td>Medium</td>
-        <td><a href="">Link</a></td>
+        <td><a href="https://leetcode.com/problems/jump-game/description/?envType=study-plan-v2&envId=top-interview-150">Link</a></td>
     </tr>
     <tr>
         <td>10.</td>
-        <td><a href="#sol10" title="Jump To Solution">88. Merge Sorted Array</a></td>
-        <td>Easy</td>
-        <td><a href="">Link</a></td>
+        <td><a href="#sol10" title="Jump To Solution">45. Jump Game II</a></td>
+        <td>Medium</td>
+        <td><a href="https://leetcode.com/problems/jump-game-ii/description/?envType=study-plan-v2&envId=top-interview-150">Link</a></td>
     </tr>
     <tr>
         <td>11.</td>
         <td><a href="#sol11" title="Jump To Solution">274. H-Index</a></td>
         <td>Medium</td>
-        <td><a href="">Link</a></td>
+        <td><a href="https://leetcode.com/problems/h-index/description/?envType=study-plan-v2&envId=top-interview-150">Link</a></td>
     </tr>
     <tr>
         <td>12.</td>
         <td><a href="#sol12" title="Jump To Solution">380. Insert Delete GetRandom O(1)</a></td>
         <td>Medium</td>
-        <td><a href="">Link</a></td>
+        <td><a href="https://leetcode.com/problems/insert-delete-getrandom-o1/description/?envType=study-plan-v2&envId=top-interview-150">Link</a></td>
     </tr>
     <tr>
         <td>13.</td>
         <td><a href="#sol13" title="Jump To Solution">238. Product of Array Except Self</a></td>
         <td>Medium</td>
-        <td><a href="">Link</a></td>
+        <td><a href="https://leetcode.com/problems/product-of-array-except-self/description/?envType=study-plan-v2&envId=top-interview-150">Link</a></td>
     </tr>
     <tr>
         <td>14.</td>
         <td><a href="#sol14" title="Jump To Solution">134. Gas Station</a></td>
         <td>Medium</td>
-        <td><a href="">Link</a></td>
+        <td><a href="https://leetcode.com/problems/gas-station/description/?envType=study-plan-v2&envId=top-interview-150">Link</a></td>
     </tr>
     <tr>
         <td>15.</td>
         <td><a href="#sol15" title="Jump To Solution">135. Candy</a></td>
         <td>Hard</td>
-        <td><a href="">Link</a></td>
+        <td><a href="https://leetcode.com/problems/candy/description/?envType=study-plan-v2&envId=top-interview-150">Link</a></td>
+    </tr>
+    <tr>
+        <td>16.</td>
+        <td><a href="#sol16" title="Jump To Solution">42. Trapping Rain Water</a></td>
+        <td>Hard</td>
+        <td><a href="https://leetcode.com/problems/trapping-rain-water/description/?envType=study-plan-v2&envId=top-interview-150">Link</a></td>
     </tr>
 </table>
 
@@ -1319,3 +1325,28 @@ Also, update the `count` of candies as well.
 </pre>
 
 The count of candies for all children is stored in `count` except for the last child's candy. Therefore, we must return `candies[candies.length-1] + count` as the total count of candies distributed among all the children.
+
+**July 24, 2025**
+
+**<span style="color:maroon; background-color:rgba(241, 180, 180, 1); border-radius: 8px; padding: 5px;">Hard</span><br/>**
+**Question 16:**
+
+<u>**42. Trapping Rain Water**</u>
+
+Given `n` non-negative integers representing an elevation map where the width of each bar is `1`, compute how much water it can trap after raining.
+
+<u>**Example 1:**</u>  
+![Example 1 Image](https://assets.leetcode.com/uploads/2018/10/22/rainwatertrap.png)  
+**Input:** height = [0,1,0,2,1,0,1,3,2,1,2,1]  
+**Output:** 6  
+**Explanation:** The above elevation map (black section) is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped.
+
+<u>**Example 2:**</u>  
+**Input:** height = [4,2,0,3,2,5]  
+**Output:** 9
+
+**Constraints:**
+
+- <code>n == height.length</code>
+- <code>1 <= n <= 2 \* 10<sup>4</sup></code>
+- <code>0 <= height[i] <= 10<sup>5</sup></code>
