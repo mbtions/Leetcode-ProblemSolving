@@ -1173,3 +1173,43 @@ The third child gets 1 candy because it satisfies the above two conditions.
 - `n == ratings.length`
 - <code>1 <= n <= 2 \* 10<sup>4</sup></code>
 - <code>0 <= ratings[i] <= 2 \* 10<sup>4</sup></code>
+
+<u>**Solution 15:**</u>
+
+    public int candy(int[] ratings) {
+        int[] candies = new int[ratings.length];
+        Arrays.fill(candies, 1);
+        int count = 0;
+
+        // while going forwards, comparing from everyone after i
+        for (int i=1; i<ratings.length; i++) {
+            if (ratings[i] > ratings[i-1])
+                candies[i] = candies[i-1] + 1;
+        }
+
+        // while going backwards, comparing everyone before i
+        for (int i=ratings.length-1; i>0; i--) {
+            if (ratings[i-1] > ratings[i])
+                candies[i-1] = Math.max(candies[i]+1, candies[i-1]);
+            count += candies[i-1];
+        }
+
+        return count + candies[ratings.length-1];
+    }
+
+The above approach followed uses two traversals of `ratings` and updating `candies` =>  
+**1. forward direction**  
+**2. backward direction**
+
+The condition says that each child must have atleast `1` candy therefore we initialised the array - `candies` with all `1`.
+
+After initialising `candies`, we traverse the `ratings` array in forward direction and update candies
+
+> <pre>if (ratings[i-1] < ratings[i])  
+>    candies[i] = candies[i-1] + 1;</pre>
+
+After the forward loop is over, we traverse the array `ratings` in _backward direction_ and update the `candies[i-1]` with the _maximum value_ between itself i.e. `candies[i-1]`, and `candies[i] + 1`.
+
+> <pre>candies[i-1] = Math.max(candies[i-1], candies[i] + 1);</pre>
+
+After the loop is over, we return `candies[candies.length-1] + count` as the total count of candies distributed among the children.
