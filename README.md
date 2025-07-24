@@ -1208,8 +1208,12 @@ After initialising `candies`, we traverse the `ratings` array in forward directi
 > <pre>if (ratings[i-1] < ratings[i])  
 >    candies[i] = candies[i-1] + 1;</pre>
 
-After the forward loop is over, we traverse the array `ratings` in _backward direction_ and update the `candies[i-1]` with the _maximum value_ between itself i.e. `candies[i-1]`, and `candies[i] + 1`.
+After the forward loop is over, we traverse the array `ratings` in _backward direction_ and update the `candies[i-1]` with the _maximum value_ between itself i.e. `candies[i-1]`, and `candies[i] + 1`.  
+Also, update the `count` of candies as well.
 
-> <pre>candies[i-1] = Math.max(candies[i-1], candies[i] + 1);</pre>
+> <pre>candies[i-1] = Math.max(candies[i-1], candies[i] + 1);
+> count += candies[i-1];
 
-After the loop is over, we return `candies[candies.length-1] + count` as the total count of candies distributed among the children.
+</pre>
+
+The count of candies for all children is stored in `count` except for the last child's candy. Therefore, we must return `candies[candies.length-1] + count` as the total count of candies distributed among all the children.
