@@ -1388,3 +1388,27 @@ Now, calculate the water trapped at `i` index using formula
 and add the answer to the count of `totalWater`.
 
 Finally, return `totalWater` with amount of trapped water.
+
+**2. Approach II: Optimal Approach:**
+
+    public static int trap(int[] height) {
+        int ans = 0;
+        int l=0, r=height.length-1;
+        int lmax = 0, rmax = 0;
+
+        while (l < r) {
+            lmax = Math.max(lmax, height[l]);
+            rmax = Math.max(rmax, height[r]);
+
+            if (lmax < rmax) {
+                ans += lmax -height[l];
+                l++;
+            } else {
+                ans += rmax - height[r];
+                r--;
+            }
+        }
+        return ans;
+    }
+
+In this approach, we have used **two-pointer approach** where `l` and `r` are the two pointers that are moved as per the heights of the bar for desired outcome to trap rainwater. It saves auxiliary space and only has the time complexity of `O(n)`.
