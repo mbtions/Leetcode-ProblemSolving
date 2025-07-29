@@ -1326,6 +1326,8 @@ Also, update the `count` of candies as well.
 
 The count of candies for all children is stored in `count` except for the last child's candy. Therefore, we must return `candies[candies.length-1] + count` as the total count of candies distributed among all the children.
 
+---
+
 **July 24, 2025**
 
 **<span style="color:maroon; background-color:rgba(241, 180, 180, 1); border-radius: 8px; padding: 5px;">Hard</span><br/>**
@@ -1413,9 +1415,9 @@ Finally, return `totalWater` with amount of trapped water.
 
 In this approach, we have used **two-pointer approach** where `l` and `r` are the two pointers that are moved as per the heights of the bar for desired outcome to trap rainwater. It saves auxiliary space and only has the time complexity of `O(n)`.
 
-**July 28, 2025**
+# July 28, 2025
 
-**<span style="color:green; background-color:#003300; border-radius: 8px; padding: 5px;">Easy</span><br/>**
+**<span style="color:green; background-color:#003300; border-radius: 8px; padding: 2px;">Easy</span><br/>**
 **Question 17:**
 
 <u>**13. Roman To Integer**</u>
@@ -1455,8 +1457,44 @@ Given a roman numeral, convert it to an integer.
 **Output:** 1994  
 **Explanation:** M = 1000, CM = 900, XC = 90 and IV = 4.
 
-Constraints:
+**Constraints:**
 
 - `1 <= s.length <= 15`
 - `s` contains only the characters `('I', 'V', 'X', 'L', 'C', 'D', 'M')`.
 - It is guaranteed that s is a valid roman numeral in the range `[1, 3999]`.
+
+### Solution 17:
+
+    public int romanToInt(String s) {
+        int result = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (i + 1 < s.length() && charToNum(s.charAt(i)) < charToNum(s.charAt(i + 1))) {
+                result -= charToNum(s.charAt(i));
+            } else {
+                result += charToNum(s.charAt(i));
+            }
+        }
+        return result;
+    }
+
+    public int charToNum(char a) {
+        return switch (a) {
+            case 'I' -> 1;
+            case 'V' -> 5;
+            case 'X' -> 10;
+            case 'L' -> 50;
+            case 'C' -> 100;
+            case 'D' -> 500;
+            case 'M' -> 1000;
+            default -> 0;
+        };
+    }
+
+Each Roman is converted to number and increased or reduced if lesser Roman appears before greater one.  
+For instance, `IV` is the roman number  
+=> `I = 1`,  
+1 is less than 5, implies  
+result = result - 1 = 0 - 1 = -1  
+=> `V = 5`,  
+result = result + 5 = -1 + 5 = 4  
+=> `result = 4`
