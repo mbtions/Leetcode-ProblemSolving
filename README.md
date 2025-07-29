@@ -106,11 +106,17 @@
         <td>Hard</td>
         <td><a href="https://leetcode.com/problems/trapping-rain-water/description/?envType=study-plan-v2&envId=top-interview-150">Link</a></td>
     </tr>
+    <tr>
+    <td>17.</td>
+    <td><a href="#sol17" title="Jump To Solution">13. Roman to Integer</a></td>
+        <td>Easy</td>
+        <td><a href="https://leetcode.com/problems/roman-to-integer/description/?envType=study-plan-v2&envId=top-interview-150">Link</a></td>
+    </tr>
 </table>
 
 ---
 
-**July 04, 2025**
+# July 04, 2025
 
 **<span style="color:green; background-color:#003300; border-radius: 8px; padding: 5px;">Easy</span><br/>**
 **Question 1:**
@@ -172,7 +178,7 @@ After brainstorming and trying code for about an hour and a half, referred to th
 
 ---
 
-**July 06, 2025**
+# July 06, 2025
 
 **<span style="color:green; background-color:#003300; border-radius: 8px; padding: 5px;">Easy</span><br/>**
 **Question 2:**
@@ -239,7 +245,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 ---
 
-**July 07, 2025**
+# July 07, 2025
 
 **<span style="color:green; background-color:#003300; border-radius: 8px; padding: 5px;">Easy</span><br/>**
 **Question 3:**
@@ -309,7 +315,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 ---
 
-**July 08, 2025**
+# July 08, 2025
 
 **<span style="color:orange; background-color:rgb(244, 235, 219); border-radius: 8px; padding: 5px;">Medium</span><br/>**
 **Question 4:**
@@ -387,7 +393,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 ---
 
-**July 09, 2025**
+# July 09, 2025
 
 **<span style="color:green; background-color:#003300; border-radius: 8px; padding: 5px;">Easy</span><br/>**
 **Question 5:**
@@ -468,7 +474,7 @@ In this question, for the follow-up to be fulfilled, you need to look for the Bo
 
 ---
 
-**July 10, 2025**
+# July 10, 2025
 
 **<span style="color:orange; background-color:rgb(244, 235, 219); border-radius: 8px; padding: 5px;">Medium</span><br/>**
 **Question 6:**
@@ -560,7 +566,7 @@ Now after final reverse of the remaining part, we get `nums = [5,6,7,1,2,3,4]`. 
 
 ---
 
-**July 11, 2025**
+# July 11, 2025
 
 **<span style="color:green; background-color:#003300; border-radius: 8px; padding: 5px;">Easy</span><br/>**
 **Question 7:**
@@ -658,7 +664,7 @@ Refer to this [video](https://youtu.be/E2-heUEnZKU?t=347) for better understandi
 
 ---
 
-**July 12, 2025**
+# July 12, 2025
 
 **<span style="color:orange; background-color:rgb(244, 235, 219); border-radius: 8px; padding: 5px;">Medium</span><br/>**
 **Question 8:**
@@ -711,7 +717,7 @@ Total profit is 4.
 
 ---
 
-**July 13, 2025**
+# July 13, 2025
 
 **<span style="color:orange; background-color:rgb(244, 235, 219); border-radius: 8px; padding: 5px;">Medium</span><br/>**
 **Question 9**
@@ -757,7 +763,9 @@ It is a very simple approach where we have gone from goal = last index to the po
 
 If the first index is reachable from goal then `canJump()` returns `true`, otherwise returns `false`.
 
-**July 15, 2025**
+---
+
+# July 15, 2025
 
 **<span style="color:orange; background-color:rgb(244, 235, 219); border-radius: 8px; padding: 5px;">Medium</span><br/>**
 **Question 10**
@@ -887,7 +895,7 @@ The approach mentioned above is very simple.
 
 ---
 
-**July 17, 2025**
+# July 17, 2025\*\*
 
 **<span style="color:orange; background-color:rgb(244, 235, 219); border-radius: 8px; padding: 5px;">Medium</span><br/>**
 **Question 11**
@@ -997,7 +1005,7 @@ Since the researcher has 3 papers with at least 3 citations each and the remaini
 
 ---
 
-**July 19, 2025**
+# July 19, 2025
 
 **<span style="color:orange; background-color:rgb(244, 235, 219); border-radius: 8px; padding: 5px;">Medium</span><br/>**
 **Question 12**
@@ -1077,7 +1085,7 @@ randomizedSet.getRandom(); // Since 2 is the only number in the set, getRandom()
 
 ---
 
-**July 20, 2025**
+# July 20, 2025
 
 **<span style="color:orange; background-color:rgb(244, 235, 219); border-radius: 8px; padding: 5px;">Medium</span><br/>**
 **Question 13**
@@ -1166,7 +1174,9 @@ We employed two loops -
 - Second loop for the suffix product computation and multiply with `ans[i]` and hence updating the final **answer** as `prefix * suffix` in `ans[i]`.
 - Finally after both the loops, we will get the product array except self which is then returned.
 
-**July 22, 2025**
+---
+
+# July 22, 2025
 
 **<span style="color:orange; background-color:rgb(244, 235, 219); border-radius: 8px; padding: 5px;">Medium</span><br/>**
 **Question 14:**
@@ -1249,7 +1259,7 @@ In the approach discussed in the above code, there are two steps which include:
 
 ---
 
-**July 23, 2025**
+# July 23, 2025
 
 **<span style="color:maroon; background-color:rgba(241, 180, 180, 1); border-radius: 8px; padding: 5px;">Hard</span><br/>**
 **Question 15:**
@@ -1328,7 +1338,7 @@ The count of candies for all children is stored in `count` except for the last c
 
 ---
 
-**July 24, 2025**
+# July 24, 2025
 
 **<span style="color:maroon; background-color:rgba(241, 180, 180, 1); border-radius: 8px; padding: 5px;">Hard</span><br/>**
 **Question 16:**
@@ -1415,6 +1425,8 @@ Finally, return `totalWater` with amount of trapped water.
 
 In this approach, we have used **two-pointer approach** where `l` and `r` are the two pointers that are moved as per the heights of the bar for desired outcome to trap rainwater. It saves auxiliary space and only has the time complexity of `O(n)`.
 
+---
+
 # July 28, 2025
 
 **<span style="color:green; background-color:#003300; border-radius: 8px; padding: 2px;">Easy</span><br/>**
@@ -1498,3 +1510,5 @@ result = result - 1 = 0 - 1 = -1
 => `V = 5`,  
 result = result + 5 = -1 + 5 = 4  
 => `result = 4`
+
+---
