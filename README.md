@@ -895,7 +895,7 @@ The approach mentioned above is very simple.
 
 ---
 
-# July 17, 2025\*\*
+# July 17, 2025
 
 **<span style="color:orange; background-color:rgb(244, 235, 219); border-radius: 8px; padding: 5px;">Medium</span><br/>**
 **Question 11**
@@ -1134,7 +1134,7 @@ You must write an algorithm that runs in `O(n)` time and without using the divis
         return ans;
     }
 
-## **Time Complexity:** <code>O(n<sup>2</sup>)</code>
+**Time Complexity:** <code>O(n<sup>2</sup>)</code>
 
 - Above code represents a little lengthy solution which can be improved  
   some of the improved approaches can be -
@@ -1164,7 +1164,7 @@ You must write an algorithm that runs in `O(n)` time and without using the divis
         return ans;
     }
 
-## **Time complexity:** `O(n)`
+**Time complexity:** `O(n)`
 
 We reach this approach after reaching to the intuition that we can keep prefix and suffix product of `i` element even without extra spaces.
 
