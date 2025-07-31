@@ -1540,39 +1540,27 @@ If the value starts with 4 or 9 use the subtractive form representing one symbol
 Only powers of 10 (`I`, `X`, `C`, `M`) can be appended consecutively at most 3 times to represent multiples of 10. You cannot append 5 (`V`), 50 (`L`), or 500 (`D`) multiple times. If you need to append a symbol 4 times use the subtractive form.  
 Given an integer, convert it to a Roman numeral.
 
-**Example 1:**
-
-**Input:** num = 3749
-
-**Output:** "MMMDCCXLIX"
-
-**Explanation:**
-
+**Example 1:**  
+**Input:** num = 3749  
+**Output:** "MMMDCCXLIX"  
+**Explanation:**  
 3000 = MMM as 1000 (M) + 1000 (M) + 1000 (M)  
 700 = DCC as 500 (D) + 100 (C) + 100 (C)  
 40 = XL as 10 (X) less of 50 (L)  
 9 = IX as 1 (I) less of 10 (X)  
 Note: 49 is not 1 (I) less of 50 (L) because the conversion is based on decimal places
 
-**Example 2:**
-
-**Input:** num = 58
-
-**Output:** "LVIII"
-
-**Explanation:**
-
-50 = L
+**Example 2:**  
+**Input:** num = 58  
+**Output:** "LVIII"  
+**Explanation:**  
+50 = L  
 8 = VIII
 
-**Example 3:**
-
-**Input:** num = 1994
-
-**Output:** "MCMXCIV"
-
-**Explanation:**
-
+**Example 3:**  
+**Input:** num = 1994  
+**Output:** "MCMXCIV"  
+**Explanation:**  
 1000 = M  
 900 = CM  
 90 = XC  
@@ -1581,3 +1569,21 @@ Note: 49 is not 1 (I) less of 50 (L) because the conversion is based on decimal 
 **Constraints:**
 
 - `1 <= num <= 3999`
+
+<u>**Solution 18:**</u>
+
+    public static String intToRoman(int num) {
+        int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        String[] symbol = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+
+        StringBuilder roman = new StringBuilder();
+
+        for (int i=0; i<values.length; i++) {
+            while (num >= values[i]) {
+                num = num - values[i];
+                roman.append(symbol[i]);
+            }
+        }
+
+        return roman.toString();
+    }
