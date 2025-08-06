@@ -112,6 +112,18 @@
         <td>Easy</td>
         <td><a href="https://leetcode.com/problems/roman-to-integer/description/?envType=study-plan-v2&envId=top-interview-150">Link</a></td>
     </tr>
+    <tr>
+    <td>18.</td>
+    <td><a href="#sol18" title="Jump To Solution">12. Integer to Roman</a></td>
+        <td>Medium</td>
+        <td><a href="https://leetcode.com/problems/integer-to-roman/description/?envType=study-plan-v2&envId=top-interview-150">Link</a></td>
+    </tr>
+    <tr>
+    <td>19.</td>
+    <td><a href="#sol19" title="Jump To Solution">58. Length of Last Word</a></td>
+        <td>Easy</td>
+        <td><a href="https://leetcode.com/problems/length-of-last-word/description/?envType=study-plan-v2&envId=top-interview-150">Link</a></td>
+    </tr>
 </table>
 
 ---
